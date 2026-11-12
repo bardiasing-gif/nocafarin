@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7F0E5">
+  <title>نُکافرین | خانگی، دست‌ساز، طبیعی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><img class="brand-logo" src="assets/logo.png" alt="لوگوی نُکافرین"><span><b>نُکافرین</b><small>خانگی، دست‌ساز، طبیعی</small></span></a>
+    <nav><a href="#home">خانه</a><a href="#shop">محصولات</a><a href="#about">درباره ما</a><a href="#contact">تماس</a></nav>
+    <button class="cart-btn" id="cart-open">سبد خرید <span id="cart-count">۰</span></button>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">طعمِ دست‌سازِ خانه</span>
+        <h1>مزه‌ی خوبِ<br><em>خاطره‌ها</em></h1>
+        <p>محصولات خانگی نُکافرین؛ با حال‌وهوای اصیل و طعمی که به سفره‌ات جان می‌دهد.</p>
+        <a class="primary-btn" href="#shop">دیدن محصولات</a>
+      </div>
+      <div class="hero-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=1000&q=85" alt="چیدمان محصولات خانگی" onerror="this.src='https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=1000&q=85'"></div>
+      <div class="hero-stamp">طبیعی<br>و خانگی</div>
+    </section>
+
+    <section class="intro" id="about">
+      <span class="eyebrow">از دل خانه</span>
+      <h2>ساده، صمیمی، خوش‌طعم</h2>
+      <p>در نُکافرین، به طعم‌های آشنا و دوست‌داشتنی اهمیت می‌دهیم. مجموعه‌ای از مرباها، ترشی‌ها و رب انار برای رنگین‌تر شدن سفره‌های شما.</p>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-head"><div><span class="eyebrow">انتخاب خوشمزه‌ی شما</span><h2>محصولات نُکافرین</h2></div><span class="count-label">۶ محصول</span></div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="banner">
+      <div><span class="eyebrow">نُکافرین</span><h2>طعم‌های کوچک،<br>خاطره‌های ماندگار</h2></div>
+      <p>برای سفارش محصولات، آن‌ها را به سبد خرید اضافه کن و از طریق راه ارتباطی ثبت سفارش را پیگیری کن.</p>
+    </section>
+  </main>
+
+  <section id="product-page" class="product-page" hidden>
+    <button class="back-link" id="back-to-shop">← بازگشت به محصولات</button>
+    <div class="product-page-layout">
+      <img id="page-product-image" src="" alt="">
+      <div class="product-page-info">
+        <span class="eyebrow">محصول نُکافرین</span>
+        <h1 id="page-product-name"></h1>
+        <div class="detail-meta"><span>وزن: ۹۰۰ گرم</span><b id="page-product-price"></b></div>
+        <p class="product-description">این محصول از مجموعه نُکافرین است. اطلاعات تکمیلی محصول در حال آماده‌سازی است.</p>
+        <button class="primary-btn" id="page-product-add">افزودن به سبد خرید</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="brand footer-brand"><img class="brand-logo" src="assets/logo.png" alt="لوگوی نُکافرین"><span><b>نُکافرین</b><small>خانگی، دست‌ساز، طبیعی</small></span></div>
+    <p>برای ارتباط و ثبت سفارش، راه‌های ارتباطی رسمی به‌زودی در این بخش قرار می‌گیرند.</p>
+    <small>© تمامی حقوق برای نُکافرین محفوظ است.</small>
+  </footer>
+
+
+  <div class="detail-overlay" id="detail-overlay">
+    <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <button class="detail-close" id="detail-close" aria-label="بستن">×</button>
+      <img id="detail-image" src="" alt="">
+      <div class="detail-copy">
+        <span class="eyebrow">محصول نُکافرین</span>
+        <h2 id="detail-title"></h2>
+        <div class="detail-meta"><span>وزن: ۹۰۰ گرم</span><b id="detail-price"></b></div>
+        <p>این محصول از مجموعه نُکافرین است. اطلاعات تکمیلی محصول در حال آماده‌سازی است.</p>
+        <button class="primary-btn" id="detail-add">افزودن به سبد خرید</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="سبد خرید">
+    <div class="cart-head"><h2>سبد خرید شما</h2><button id="cart-close" aria-label="بستن">×</button></div>
+    <div id="cart-items" class="cart-items"><p class="empty">سبد خریدت هنوز خالیه.</p></div>
+    <div class="cart-total"><span>مجموع</span><b id="cart-total">۰ تومان</b></div>
+    <div class="checkout-entry">
+      <p class="cart-note">برای ادامه، اطلاعات گیرنده و نشانی تحویل را وارد کن.</p>
+      <button class="primary-btn checkout-open" id="checkout-open" type="button">ادامه و ثبت سفارش</button>
+    </div>
+  </aside>
+
+  <div class="checkout-overlay" id="checkout-overlay" aria-hidden="true">
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+      <button class="checkout-close" id="checkout-close" type="button" aria-label="بستن">×</button>
+      <div id="checkout-form-view">
+        <span class="eyebrow">مرحله پایانی خرید</span>
+        <h2 id="checkout-title">ثبت اطلاعات سفارش</h2>
+        <p class="checkout-intro">اطلاعات زیر را با دقت وارد کن تا سفارش در همین مرورگر ثبت و متن آن برای ارسال آماده شود.</p>
+        <form id="checkout-form">
+          <div class="checkout-fields">
+            <label>نام و نام خانوادگی <input name="customerName" autocomplete="name" required maxlength="100" placeholder="نام گیرنده"></label>
+            <label>شماره موبایل <input name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="مثلاً 09123456789"></label>
+            <label>استان <input name="province" required maxlength="60" placeholder="استان"></label>
+            <label>شهر <input name="city" required maxlength="60" placeholder="شهر"></label>
+            <label class="wide-field">نشانی کامل <textarea name="address" autocomplete="street-address" required rows="3" maxlength="500" placeholder="خیابان، کوچه، پلاک، واحد و کدپستی در صورت وجود"></textarea></label>
+            <label class="wide-field">توضیحات سفارش <textarea name="note" rows="2" maxlength="500" placeholder="اختیاری؛ مثلاً زمان مناسب تحویل"></textarea></label>
+          </div>
+          <div class="checkout-summary" id="checkout-summary"></div>
+          <p class="checkout-disclaimer">هزینه ارسال و روش پرداخت پس از هماهنگی با فروشگاه مشخص می‌شود. این ثبت در مرورگر ذخیره می‌شود و به‌تنهایی به فروشگاه ارسال نمی‌شود.</p>
+          <button class="primary-btn checkout-submit" type="submit">ثبت سفارش و ساخت متن سفارش</button>
+        </form>
+      </div>
+      <div id="checkout-success" hidden>
+        <span class="checkout-success-icon">✓</span>
+        <h2>سفارش در این مرورگر ثبت شد</h2>
+        <p id="checkout-order-number"></p>
+        <p class="checkout-intro">برای اینکه فروشگاه از سفارش باخبر شود، متن زیر را کپی و از راه ارتباطی رسمی برای فروشگاه ارسال کن.</p>
+        <textarea id="checkout-order-text" rows="12" readonly></textarea>
+        <button class="primary-btn checkout-submit" id="copy-order" type="button">کپی متن سفارش</button>
+        <button class="checkout-secondary rubika-send" id="send-rubika" type="button">رفتن به پیوی نُکافرین در روبیکا</button>
+        <p class="rubika-hint">متن سفارش کپی می‌شود؛ در پیوی روبیکا آن را جای‌گذاری و ارسال کن.</p>
+        <button class="checkout-secondary" id="new-order" type="button">بازگشت به فروشگاه</button>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
